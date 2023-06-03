@@ -9,7 +9,6 @@ class Snake:
         self.segments = []
         self.create_snake()
 
-
     def generate_segment(self, coord):
         snake_segment = Turtle(shape='square')
         snake_segment.color('white')

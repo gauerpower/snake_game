@@ -20,6 +20,11 @@ scr.onkey(snake.turn_west, 'a')
 scr.onkey(snake.turn_south, 's')
 scr.onkey(snake.turn_east, 'd')
 
+scr.onkey(snake.turn_north, 'Up')
+scr.onkey(snake.turn_west, 'Left')
+scr.onkey(snake.turn_south, 'Down')
+scr.onkey(snake.turn_east, 'Right')
+
 game_going = True
 
 def end_game():
@@ -33,7 +38,7 @@ while game_going:
 
     if snake.segments[0].distance(food) < 15:
         snake.extend_length()
-        food.regenerate()
+        food.regenerate(snake.segments)
         scoreboard.increment_score()
 
     if snake.segments[0].xcor() > 290 or snake.segments[0].xcor() < -290 or snake.segments[0].ycor() > 290 or snake.segments[0].ycor() < -290:
