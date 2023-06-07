@@ -21,10 +21,6 @@ class Scoreboard(Turtle):
         self.score += 1
         self.update_score()
 
-    # def game_over(self):
-    #     self.goto(x = 0, y = 0)
-    #     self.write('Game over.', True, 'center', ('Courier', 24, 'bold'))
-
     def reset(self):
         if self.score > self.high_score:
             self.high_score = self.score
